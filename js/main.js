@@ -1,29 +1,39 @@
-function crearCodigo() {
-    return parseInt(Math.random() * 10_000_000)
+const section = document.querySelector("section")
+// Armar tabla en html
+const armarCardsPersonajes = (espec) =>{
+  return `
+  <div class="card">
+  <img src="${espec.imagen}" class="card-img-top" alt="${espec.tipo}">
+  <div class="card-body">
+    <h5 class="card-title">${espec.tipo}</h5>
+    <p class="card-text"></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Daño: ${espec.danio}</li>
+    <li class="list-group-item">Salud: ${espec.vida}</li>
+    <li class="list-group-item">Defensa: ${espec.defensa}</li>
+  </ul>
+  <div class="card-body">
+    <button id="${espec.id}" class="a-active" tittle="Elegir clase">Elegir clase </button>
+  </div>
+</div>`
 }
-function buscarClase(codigo) {
-    let resultado = profesion.find(profesion => profesion.codigo === codigo)
-        return resultado
+// Cargar los personajes en el HTML
+const cargarPersonajes = (array) =>{
+  let cardHTML =""
+  if (array.length > 0){
+    array.forEach( espec => cardHTML += armarCardsPersonajes(espec))
+  } else {
+    cardHTML= "<h2 class='error'>Error al cargar los personajes </2>"
+  }
+  section.innerHTML = cardHTML
+} 
+cargarPersonajes(espec)
+
+const guardarPersonaje = () => {
+
 }
-function login() {
-    const codigoElegido = parseInt(prompt(mensajeBienvenida))
-          if (codigoElegido !== 1 && codigoElegido !== 2 && codigoElegido !== 3) {
-            alert("⛔️ Error, no eligio una clase valida")
-            return 
-          }
-          let seleccionado = buscarClase(codigoElegido)
-          let mensaje = `Has seleccionado: ${seleccionado.tipo} . Vida ${seleccionado.vida}. daño ${seleccionado.danio}.`
-              alert(mensaje)
-          const respuesta = confirm("¿Confirmas esta clase?")
-          if (respuesta) {
-            mostrarProgresion(seleccionado.vida)
-          }
-}
-function mostrarProgresion(vida) {
-    const prog = new Progresion(vida, nivel)
-    let msjProgresion = "✅ Progreso de vida por nivel " + prog.calcularProgresNivel() + "\n" +
-                        "✅ Progreso de vida con suerte " + prog.calcularProgresNivelSuerte() + "\n" +
-                        "\n" +
-                        "El codigo unico de su personaje es: " + crearCodigo()
-        alert(msjProgresion)
+
+const recuperarPersonaje = () => {
+  
 }
