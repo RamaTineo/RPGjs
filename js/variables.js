@@ -1,6 +1,6 @@
 
 
-const espec = [{imagen:"https://res.cloudinary.com/ramatineo/image/upload/v1669752612/RPGon/images/pj/mage_gi9vab.jpg", codigo: 1, tipo: 'Mago', vida: 25, danio:30, defensa:2},
+const especs = [{imagen:"https://res.cloudinary.com/ramatineo/image/upload/v1669752612/RPGon/images/pj/mage_gi9vab.jpg", codigo: 1, tipo: 'Mago', vida: 25, danio:30, defensa:2},
                {imagen: "https://res.cloudinary.com/ramatineo/image/upload/v1669752613/RPGon/images/pj/warrior_rytvjx.jpg", codigo: 2, tipo: 'Guerrero', vida: 35, danio:20, defensa:10},
                {imagen: "https://res.cloudinary.com/ramatineo/image/upload/v1669752613/RPGon/images/pj/archer_ahn8vb.jpg", codigo: 3, tipo: 'Arquero', vida: 30, danio:25, defensa:5}]
 

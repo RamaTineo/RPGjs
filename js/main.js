@@ -1,4 +1,13 @@
+const personaje = []
 const section = document.querySelector("section")
+
+// Guardar y recuperar el personaje ne localStorage y JSON
+const guardarPersonaje = () => (personaje.length > 0) && localStorage.setItem("personajeSelec", JSON.stringify(personaje))
+
+const recuperarPersonaje = () =>JSON.parse(localStorage.getItem("personajeSelec"))||[]
+
+personaje.push(...recuperarPersonaje())
+
 // Armar tabla en html
 const armarCardsPersonajes = (espec) =>{
   return `
@@ -14,7 +23,7 @@ const armarCardsPersonajes = (espec) =>{
     <li class="list-group-item">Defensa: ${espec.defensa}</li>
   </ul>
   <div class="card-body">
-    <button id="${espec.id}" class="a-active" tittle="Elegir clase">Elegir clase </button>
+    <button id="${espec.codigo}" class="a-active button" tittle="Elegir clase">Elegir clase </button>
   </div>
 </div>`
 }
@@ -28,12 +37,21 @@ const cargarPersonajes = (array) =>{
   }
   section.innerHTML = cardHTML
 } 
-cargarPersonajes(espec)
 
-const guardarPersonaje = () => {
+// Activar eventos en los botones 
+const activarClick = () =>{
+  const botonesAdd = document.querySelectorAll("button.button")
+  botonesAdd.forEach(btn =>{
+    btn.addEventListener("click", (e)=>{
+      let resultado = buscarEspec(e.target.id)
+      personaje.push(resultado)
+      guardarPersonaje()
 
+    })
+
+  })
 }
+cargarPersonajes(especs)
+activarClick()
 
-const recuperarPersonaje = () => {
-  
-}
+const buscarEspec = (codigo)=> especs.find(espec => espec.codigo === parseInt(codigo))
