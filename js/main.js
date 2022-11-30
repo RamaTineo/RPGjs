@@ -23,7 +23,7 @@ const armarCardsPersonajes = (espec) =>{
     <li class="list-group-item">Defensa: ${espec.defensa}</li>
   </ul>
   <div class="card-body">
-    <button id="${espec.codigo}" class="a-active button" tittle="Elegir clase">Elegir clase </button>
+    <button id="${espec.codigo}" class="a-active button verPersonaje" tittle="Elegir clase">Elegir clase </button>
   </div>
 </div>`
 }
@@ -46,12 +46,23 @@ const activarClick = () =>{
       let resultado = buscarEspec(e.target.id)
       personaje.push(resultado)
       guardarPersonaje()
-
+      verPersonaje()
     })
-
+    
   })
 }
 cargarPersonajes(especs)
 activarClick()
 
 const buscarEspec = (codigo)=> especs.find(espec => espec.codigo === parseInt(codigo))
+
+function verPersonaje() {
+  if (personaje.length > 0) {
+      const perselect = new seleccion(personaje)
+      alert(`El personaje seleccionado es ${perselect.obtenerPersonaje()}`)
+  } else {
+      alert("No selecciono ningun personaje")
+  }
+}
+const btnVerPersonaje = document.querySelector("button.verPersonaje")
+btnVerPersonaje.addEventListener("click", verPersonaje)
