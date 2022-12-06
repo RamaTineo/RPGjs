@@ -23,7 +23,7 @@ const armarCardsPersonajes = (espec) =>{
     <li class="list-group-item">Defensa: ${espec.defensa}</li>
   </ul>
   <div class="card-body">
-    <button id="${espec.codigo}" class="a-active button verPersonaje" tittle="Elegir clase">Elegir clase </button>
+    <button id="${espec.codigo}" class="a-active button" tittle="Elegir clase">Elegir clase </button>
   </div>
 </div>`
 }

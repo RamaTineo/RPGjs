@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "imagen": "https://res.cloudinary.com/ramatineo/image/upload/v1669752612/RPGon/images/pj/mage_gi9vab.jpg",
+        "tipo": "Mago",
+        "vida": 25,
+        "danio": 30,
+        "defensa": 2
+    },
+               {
+        "id": 2,
+        "imagen": "https://res.cloudinary.com/ramatineo/image/upload/v1669752613/RPGon/images/pj/warrior_rytvjx.jpg",
+        "tipo": "Guerrero",
+        "vida": 35,
+        "danio": 20,
+        "defensa": 10
+    },
+    {
+        "id": 3,
+        "imagen": "https://res.cloudinary.com/ramatineo/image/upload/v1669752613/RPGon/images/pj/archer_ahn8vb.jpg",
+        "tipo": "Arquero",
+        "vida": 30,
+        "danio": 25,
+        "defensa": 5
+    }
+]
