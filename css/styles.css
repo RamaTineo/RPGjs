@@ -8,7 +8,7 @@
 /****************** CSS INDEX *******************/
 .body{
     background-image: url(https://res.cloudinary.com/ramatineo/image/upload/v1669752613/RPGon/images/fondos/fondoMonta%C3%B1oso_lm8mbt.jpg);
-    background-repeat: no-repeat;
+    background-repeat:repeat-y;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -62,6 +62,10 @@
 .titulo{
     border-bottom: 1px black solid;
     display: block;
+}
+.titulo2{
+    color: whitesmoke;
+
 }
 .error{
     color: whitesmoke;
