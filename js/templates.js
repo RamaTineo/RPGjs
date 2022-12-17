@@ -46,3 +46,55 @@ const retornoPjSelect = (pjSelect) =>{
     </div>
   </div>`
   }
+
+  const retornoPjSelectCom = (pjSelect) =>{
+    return `
+    <div class="card">
+    <img src="${pjSelect.imagen}" class="card-img-top" alt="${pjSelect.tipo}">
+    <div class="card-body">
+      <h5 class="card-title">${pjSelect.tipo}</h5>
+      <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Daño: ${pjSelect.danio}</li>
+      <li class="list-group-item">Salud: ${pjSelect.vida}</li>
+      <li class="list-group-item">Defensa: ${pjSelect.defensa}</li>
+    </ul>
+    <div class="card-body">
+     <button id="${pjSelect.id}" class="btnDef" tittle="Defender">Defender</button>
+    </div>
+  </div>`
+  }
+
+  const retornoCardEnem = (enemigo) =>{
+    return `
+    <div class="card">
+    <img src="${enemigo.imagen}" class="card-img-top" alt="${enemigo.tipo}">
+    <div class="card-body">
+      <h5 class="card-title">${enemigo.tipo}</h5>
+      <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Daño: ${enemigo.danio}</li>
+      <li class="list-group-item">Salud: ${enemigo.vida}</li>
+      <li class="list-group-item">Defensa: ${enemigo.defensa}</li>
+    </ul>
+    <div class="card-body">
+     <button id="${enemigo.id}" class="btnAtack" tittle="Atacar">Atacar</button>
+    </div>
+  </div>`
+  }
+
+  const elegirNick = ()=>{
+  Swal.fire({
+      input: 'text',
+      inputLabel: 'Entra tu nick',
+      inputPlaceholder: 'MataBugs',
+      id: 'ingresoNick',
+      inputAttributes: {
+        'aria-label': 'Type your message here'
+      },
+      showCancelButton: true,
+    })
+  }
+  

@@ -8,20 +8,12 @@
         "defensa": 5
     },
     {
-        "id": 12,
-        "imagen": "https://res.cloudinary.com/ramatineo/image/upload/v1669752612/RPGon/images/enemigos/mariquita_kpquug.jpg",
-        "tipo": "Mariquita",
-        "vida": 10,
-        "danio": 15,
-        " defensa": 1
-    },
-    {
         "id": 13,
         "imagen": "https://res.cloudinary.com/ramatineo/image/upload/v1669752611/RPGon/images/enemigos/mantis_cmks5s.jpg",
         "tipo": "Mantis",
         "vida": 15,
         "danio": 20,
-        " defensa": 2
+        "defensa": 2
     },
     {
         "id": 14,
