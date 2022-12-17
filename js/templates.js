@@ -84,17 +84,18 @@ const retornoPjSelect = (pjSelect) =>{
     </div>
   </div>`
   }
-
+ 
   const elegirNick = ()=>{
+    
   Swal.fire({
       input: 'text',
       inputLabel: 'Entra tu nick',
       inputPlaceholder: 'MataBugs',
-      id: 'ingresoNick',
       inputAttributes: {
         'aria-label': 'Type your message here'
       },
       showCancelButton: true,
     })
-  }
+    
   
+  }
